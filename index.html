@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>   
+  <body>
+    <p>
+      <strong>B</strong>ody <strong>M</strong>ass <strong>I</strong>ndex
+      Calculator
+    </p>
+    <div  class="main">
+    <form onsubmit="validate(event)">
+    <div class="subdiv">
+          <input type="number" id="age"/>
+          <label>Age</label>
+        
+          <input type="radio"  name="gender" id="female"  value="Female" checked/>
+          <label >Female</label>
+          <input type="radio"  name="gender" id="male"  value="Male"/>
+          <label >Male</label>
+        </div>
+        <div class="subdiv">
+          <input type="number"  id="height" />
+          <label>Heignt (cm)</label>
+          <input type="number" id="weight" />
+          <label>Weight (kg)</label>
+        </div>
+        <div class="subdiv">
+          <button type="submit" name="btn"  id="btn1" value="SUBMIT" >Submit</button>
+          <button type="reset" name="btn" id="btn2" value="RESET" onclick="resetForm()">Reset</button>
+        </div>
+        
+</form>
+</div>
+<div id="displaydata">
+    <h1 class="result">your are <span id="status"></span> and your BMI is <span id="bmi"> </span></h1>
+    <div> Gender: <span id="displaygender" ></span></div>
+    <div>Age: <span id="displayage"></span></div>
+    <div>Height: <span id="displayheight"></span></div>
+    <div>Weight: <span id="displayweight"></span></div>
+    <script src="script.js"></script>
+  </body>
+</html>
